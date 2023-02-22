@@ -1,5 +1,6 @@
 package day4;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task4 {
@@ -9,15 +10,18 @@ public class Task4 {
      for (var i = 0; i < numbers.length; i++) {
          numbers[i] = rand.nextInt(10000);
      }
-     var sum =0;
-     var max = numbers[0] + numbers[1] + numbers[2];
+     var max = 0;
      var result = 0;
-     for (var j = 1; j < numbers.length - 2; j++) {
-         sum = numbers[j] + numbers[j + 1] + numbers[j + 2];
-         if (sum > max) {
-             max = sum;
-             result = j;
+     for (var j = 0; j < numbers.length - 2; j++) {
+         var sum = 0;
+         for (var l = j; l < j + 3; l++) {
+             sum = sum + numbers[l];
+            }
+             if (sum > max) {
+                 max = sum;
+                 result = j;
          }
+
      }
      System.out.println(max);
      System.out.println(result);
