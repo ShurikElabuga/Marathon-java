@@ -12,7 +12,7 @@ public class Task4 {
         members1.add("Mary Dresden");
         members1.add("Dorotty mailes");
 
-     //   MusicBand band1 = new MusicBand("LyaLyaLya", 1971, members1);
+        MusicBand band1 = new MusicBand("LyaLyaLya", 1971, members1);
 
         List<String> members2 = new ArrayList<>();
         members2.add("Fanny Kaplan");
@@ -20,14 +20,14 @@ public class Task4 {
         members2.add("Jonatan Smoul");
         members2.add("Bengamin Livsi");
 
-      //  MusicBand band2 = new MusicBand("My ROK", 1999, members2);
+        MusicBand band2 = new MusicBand("My ROK", 1999, members2);
 
-//        band1.printMembers();
-//        band2.printMembers();
-//
-//        MusicBand.transferMembers(band1, band2);
-//
-//        band1.printMembers();
-//        band2.printMembers();
+        band1.printMembers();
+        band2.printMembers();
+
+        MusicBand.transferMembers(band1, band2);
+
+        band1.printMembers();
+        band2.printMembers();
     }
 }
