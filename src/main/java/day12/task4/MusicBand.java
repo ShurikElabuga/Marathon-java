@@ -5,11 +5,6 @@ import day12.task5.MusicArtist;
 import java.util.List;
 
 public class MusicBand {
-    public static void transferMembers(MusicBand band1, MusicBand band2) {
-    }
-
-    public void printMembers() {
-    }
     private String name;
     private int year;
    private List<String> members;
@@ -17,7 +12,7 @@ public class MusicBand {
     public MusicBand(String name, int year, List<MusicArtist> members) {
         this.name = name;
         this.year = year;
-        this.members = members;
+        // this.members = members;
     }
 
     public String getName() {
