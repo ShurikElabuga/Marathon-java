@@ -9,7 +9,7 @@ public class MusicBand {
     private int year;
    private List<String> members;
 
-    public MusicBand(String name, int year, List<MusicArtist> members) {
+    public MusicBand(String name, int year, List<String> members) {
         this.name = name;
         this.year = year;
         // this.members = members;
