@@ -20,7 +20,7 @@ public class Task1 {
                 if (shoes.length < 3) {
                     throw new IllegalArgumentException();
                 } else if (Integer.parseInt(shoes[2]) == 0) {
-                    pw.println(input);
+                    pw.println(shoes[0] + ", " + shoes[1] + ", " + shoes[2]);
                 }
             }
             pw.close();
