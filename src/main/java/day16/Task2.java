@@ -6,16 +6,19 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String[] args) throws FileNotFoundException {
-
+    public static void main(String[] args) {
+        try {
         File file1 = new File("C://My downloads//JavaMarathon2021//src//main//resources//file1.txt");
-        PrintWriter pw1 = new PrintWriter(file1);
+        PrintWriter pw1 = null;
+            pw1 = new PrintWriter(file1);
 
-            Random rand = new Random();
+
+        Random rand = new Random();
             for (var i = 0; i < 1000; i++) {
                 pw1.print(rand.nextInt(100) + " ");
             }
             pw1.close();
+
 
             File file2 = new File("C://My downloads//JavaMarathon2021//src//main//resources//file2.txt");
             PrintWriter pw2 = new PrintWriter(file2);
@@ -28,6 +31,7 @@ public class Task2 {
                 numbers[counter1++] = Integer.parseInt(number);
             }
             scan.close();
+
             int counter2 = 0;
             var sum = 0;
             for (int number : numbers) {
@@ -41,16 +45,27 @@ public class Task2 {
             }
             pw2.close();
             printResult(file2);
+             } catch (FileNotFoundException e) {
+                 System.out.println("Файл не найден");
+             }
     }
-    static void printResult(File file) throws FileNotFoundException {
+    static void printResult(File file) {
+        try {
+
+
         Scanner scan = new Scanner(file);
        String line = scan.nextLine();
         String[] numberString = line.split(" ");
         double sum = 0;
+
         for (String number : numberString) {
             sum += Double.parseDouble(number);
         }
         scan.close();
         System.out.println((int)sum);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден");
+        }
     }
 }
