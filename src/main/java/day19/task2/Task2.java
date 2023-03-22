@@ -29,9 +29,6 @@ public class Task2 {
                 carsPlace.put(numbers[0], point);
             }
             scanner.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
-        }
         Scanner in = new Scanner(System.in);
         System.out.println("Введите координаты Х и У двух точек квадрата в диапазоне от 0 до 99.\n" +
                 " Значения координат первой точки должны быть меньше значений координат второй точки.\n");
@@ -57,6 +54,9 @@ public class Task2 {
             }
         }
         System.out.println("Всего " + counter + " машин.");
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден");
+        }
     }
 }
 
